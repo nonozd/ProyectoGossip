@@ -1,0 +1,296 @@
+* {
+margin: 0; /* establece el margen para los cuatro lados */
+padding: 0; /* stablece el espacio que habrá del borde hacia adentro */
+box-sizing: border-box; /* sirve para cambiar el modelo de caja por defecto de los navegadores */
+}
+.contenedor { /* Llamamos a todas las clases llamadas contenedor */
+padding: 60px 0; /* 60px arriba y 0px en los demás lados */
+width: 90%;
+max-width: 1000px; 
+margin: auto; /* margen automático, es decir, que lo centre todo */
+overflow: hidden; /* Oculta todo lo que excede la caja */
+}
+.title {
+color: #642a73;
+font-size: 30px;
+text-align: center;
+margin-bottom: 60px; /* tendrá 60px arriba que lo separará */
+}
+/* ENCABEZADO */
+header {
+width: 100%;
+height: 850px;
+
+/* Copiamos el código html de un degradado. De la página uigradients */
+background: #bc4e9c; 
+background: #314755;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to bottom, #26a0da, #314755);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to bottom, hsla(340, 95%, 50%, 0.459),  #314755), url(../imagenes/img6.jpg) /* imagen de la portada */; /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+background-size: cover; /* redimensiona las imágenes */
+background-attachment: fixed; /* para dejar la imagen de fondo fija a la hora de hacer scroll. Es decir, el desplazamiento del página */
+position: relative; /* Para desplazarlo respecto a su borde */
+}
+
+nav{
+    text-align: right; /* que se ubique al lado derecho */
+    padding: 30px 50px 0 0; 
+}
+
+nav > a{ /* esto afectará a todos los "a" ubicados dentro de un "nav" */ 
+    color:#fff; /* le da color blanco */
+    font-weight: 300; /* lo hace más ligero */
+    text-decoration: none; /* le quita el subrayado de abajo cuando ya ha sido seleccionado alguna vez */
+    margin-right: 10px; /* separa el uno del otro */ 
+}
+
+nav > a:hover{ /* el hover es cuando le pasan el cursor del mouse por encima */
+    text-decoration: underline; 
+}
+
+header .textos-header{
+    display: flex; /* ayuda a colocar las cajas como si fueran celdas de tablas */
+    height: 430px;
+    width: 100%;
+    align-items: center; /* centrarlos verticalmente */ 
+    justify-content: center; 
+    flex-direction: column; /* Para que los textos de encabezado se encuentren uno abajo del otro */
+    text-align: center;
+}
+
+.textos-header h1{ /* Llamamos al h1 ubicado en la clase "textos-header" */
+    font-size: 50px; /* tamaño */
+    color:#fff; /* color blanco */
+}
+
+.textos-header h2{ /* Llamamos al h2 ubicado en la clase "textos-header" */
+    font-size: 30px;
+    font-weight: 300;
+    color:#fff;
+}
+
+.wave { /* llamamos a la clase nombrada "wave" */ 
+    position: absolute; /* permite posicionar elementos de manera absoluta */
+    bottom: 0; /* permite desplazar un elemento respecto a su posición original tomando como referencia el borde inferior del elemento */
+    width: 100%;
+}
+
+/* Todo sobre nosotros */
+
+main .sobre-nosotros{
+    padding: 30px 0 60px 0;
+}
+
+.contenedor-sobre-nosotros{
+    display: flex;
+    justify-content: space-evenly; /* para que reparta el espacio equitativamente */
+}
+
+.img-sobre-nosotros{ /* Llamamos a la imagen con clase definida como "img-sobre-nosotros" */
+    width: 48%;
+}
+
+.sobre-nosotros .contenido-textos{ /* esto afectará a la clase "contenido-textos" dentro de la clase "sobre-nosotros"  */
+    width: 48%;
+}
+
+.contenido-textos h3{ /* esto afectará solamente al h3 ubicado en la clase "contenido-textos" */
+    margin-bottom: 10px;
+    padding: 30px;
+}
+
+.contenido-textos h3 span{ /* Esto afectará al "span" ubicado en el "h3" que a su vez está ubicado en la clase "contenido-textos" */
+    background: #4d0686; /* color de fondo */
+    color: #fff; /* color blanco */
+    border-radius: 50%; /* para que sea redondo */
+    display: inline-block; /* para que tenga propiedad de bloque */ 
+    text-align: center; /* para que se centre respectivamente del contorno */
+    width: 30px;
+    height: 30px;
+    padding: 2px;
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, .5); /* para que tenga un sombreado */
+    margin-right: 5px;
+
+}
+
+.contenido-textos p{ /* esto afectará al contenido dentro de "p" que a su vez está dentro de la clase "contenido-textos" */
+    padding: 0px 0px 30px 15px; /* arriba y derecha no tenga padding pero que en la parte de abajo y de la izquierda sí */
+    font-weight: 300; 
+    text-align: justify;
+}
+
+/* Galería de portafolios */
+
+.noticias2{
+    background: #f2f2f2;
+}
+
+.galeria-noticias2{
+    display: flex; /* ayuda a colocar las cajas como si fueran celdas de tablas */
+    justify-content: space-evenly; /* distribuye el espacio entre elementos de manera uniforme */
+    flex-wrap: wrap; /* para que los elementos dentro no se ubiquen en la misma linea sino en diferentes */
+}
+
+.imagenes-noticias2{
+    width: 24%;
+    height: 150px;
+    margin-bottom: 10px; /* establece el espacio requerido en la parte inferior */
+    overflow: hidden; /* Permite regular si los contenidos que sobresalen se seguirán viendo */
+    position: relative;
+    cursor: pointer; /* modifica el cursor del mouse */
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, .5); /* permite proyectar una sombra difuminada desde el marco de casi cualquier elemento */
+}
+
+.imagenes-noticias2 img{ /* esto afectará a las imagenes (img) dentro de la clase "imagenes-portafolio*/
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* para corregir el tamaño de la imagen */
+    display: block;
+}
+
+.imagenes-flotantes{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    transform: scale(0); /* define una transformación que modifica el tamaño de un elemento en el plano 2D */
+    background: hsla(273,91%,27%, 0.7); /* color de fondo */
+    transition: transform .5s; /* Permite definir la transición entre dos estados de un elemento */
+    display: flex; /* ayuda a colocar las cajas como si fueran celdas de tablas */
+    justify-content: center;
+    align-items: center; 
+    flex-direction: column;
+}
+
+.imagenes-flotantes img{ /* esto afectará a todo lo que se ubique dentro del elemento "img" que a su vez está dentro de la clase "imagenes-flotantes" */
+    width: 47px;
+    height: 47px;
+}
+
+.imagenes-flotantes p{ /* esto afectará a todo lo que se ubique dentro del elemento "p" que a su vez está dentro de la clase "imagenes-flotantes*/
+    color: #fff; /* color blanco */
+}
+
+.imagenes-noticias2:hover .imagenes-flotantes{ /* cuando llegue al hover, que "imagenes flotantes" tenga un transform */ 
+    transform: scale(1); /* define una transformación que modifica el tamaño de un elemento en el plano 2D */
+}
+
+/* clientes */
+
+.tarjetas{ /* llamando a la clase "tarjetas" */
+   display: flex;
+   justify-content: space-evenly;
+}
+
+.tarjetas .tarjeta{
+    background: #4d0686;
+    display: flex;
+    width: 46%;
+    height: 200px;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 5px;
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.6); /* para que tenga un sombreado */
+}
+
+.tarjetas .tarjeta img{ /* esto afectará a los elementos img dentro de la clase "tarjeta" que a su vez está dentro de la clase "tarjetas" */
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border: 3px solid #fff;
+    border-radius: 50%;
+    display: block;
+    object-fit: contain; /* para la imagen */
+    background: white; 
+}
+
+.tarjetas .tarjeta > .contenido-texto-tarjetas{ /* Esto afectará a los elementos dentro de la clase "tarjeta" que a su vez está dentro de la clase "tarjetas" */
+    width: 60%;
+    color: #fff;
+}
+
+.tarjetas .tarjeta > .contenido-texto-tarjetas p{ /* esto afectará a los elementos p dentro de la clase "tarjeta" que a su vez está dentro de la clase "tarjetas" */
+    font-weight: 300;
+    padding-top: 10px; /* para que cuente con un pequeño espaciado entre el encabezado con el párrafo */
+}
+
+/* Nuestros servicios */
+
+.nuestros-servicios{ /* llamamos a la clase "nuestros-servicios" */
+    background: #f2f2f2;
+    padding-bottom: 30px; /* para que se vea un poco más largo desde abajo */
+}
+
+.servicio-contenedor{ 
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.servicios-individual{
+    width: 28%;
+    text-align: center;
+}
+
+.servicios-individual img{ /* darle tamaño a las imágenes que están dentro de la clase "servicios-individual" */
+    width: 100%;
+
+}
+
+.servicios-individual h3{ /* darle un margen al encabezado dentro de la clase "servicios-individual" */
+    margin: 10px 0;
+}
+
+.servicios-individual p{
+    font-weight: 300;
+    text-align: justify; /* modificamos el texto */
+}
+
+/* Footer */
+
+footer{ /* modificamos el pie de página */
+    background: #414141;
+    padding: 60px 0 30px 0; /* 60px arriba, 0 a la derecha, 30px abajo y 0 a la izquierda */
+    margin: auto; /* para centrar todo */
+    overflow: hidden; /* para que no se rompa la maqueta del footer */
+}
+
+.contenedor-footer{
+    display: flex;
+    width: 90%;
+    justify-content: space-evenly; /* para repartir los elementos equitativamente */
+    margin: auto;
+    padding-bottom: 50px;
+    border-bottom: 1px solid #ccc; /* creamos un borde sólido */
+}
+
+.contenedor-foo{
+    text-align: center; /* para que todo lo centre */
+    padding-left: 100px;
+}
+
+.contenedor-foo h4{ /* esto afectará a todos los h4 dentro de la clase "contenedor-foo" */
+    color: #fff;
+    border-bottom: 3px solid #af20d3; 
+    padding-bottom: 5px; /* para agregarle un margen, para que no esté tan pegado */
+    margin-bottom: 10px; /* para separarlo un poco de la parte de abajo */
+}
+
+.contenedor-foo p{
+    color: #ccc;
+}
+
+.titulo-final{ /* llamamos a la clase "titulo-final" */
+    text-align: center;
+    font-size: 24px;
+    margin: 20px 0 0 0; /* margen arriba de 20px y 0 en los demás lados */
+    color: #9e9797; /* un gris claro */
+}
+
+
+#botonArriba{ /* esto afectará al elemento con el id "botonArriba" */
+    position: fixed; /* posición fija en el navegador */
+    bottom: 20px;
+    right: 20px;
+    width: 40px;
+}
